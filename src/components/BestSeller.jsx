@@ -8,9 +8,10 @@ const BestSeller = () => {
     const {products} = useContext(ShopContext);
     const [bestSeller, setBestSeller] = useState([]);
 
+    {/** BestSeller image has been displayed. */}
     useEffect(() => {
         const bestProduct = products.filter((item) => (item.BestSeller));
-        setBestSeller(bestProduct.slice(0,5))
+        setBestSeller(bestProduct.slice(0,5))  
     },[products])
 
   return (
